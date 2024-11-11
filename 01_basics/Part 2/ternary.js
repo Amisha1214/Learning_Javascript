@@ -6,7 +6,7 @@ if (isUserLoggedIn) {
 else{
     console.log("Please Login");
 }
-isUserLoggedIn ? console.log("Welcome to the website") :
+isUserLoggedIn ? console.log("Welcome to the website"):
 console.log("Please login")
  
 
