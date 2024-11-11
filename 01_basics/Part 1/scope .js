@@ -5,7 +5,7 @@
 let globalvariable = 10
 
 function xyz (){
-    let value = 3
+    let value = 30
     console.log(globalvariable);  
 }
 
