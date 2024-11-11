@@ -16,4 +16,3 @@ isUserLoggedIn
     ?console.log("Access Granted")
     :console.log("Access Denied !! Please Buy The Course")
     :console.log("Access Denied !! Please login")
-
