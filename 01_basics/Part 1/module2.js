@@ -2,4 +2,4 @@
 
 var{moduleFunction} = require('./module1.js')
 
-moduleFunction() Amisha
+moduleFunction()
