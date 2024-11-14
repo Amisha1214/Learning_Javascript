@@ -6,4 +6,4 @@ function moduleFunction (){
 
 // export { moduleFunction, moduleVariable}
 
-module.exports = { moduleFunction, moduleVariable }
+export default { moduleFunction, moduleVariable }
