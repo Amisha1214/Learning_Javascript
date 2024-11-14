@@ -1,14 +1,16 @@
-// switch(key){
+// Template for a switch-case structure
+switch(key){
 
-//     case value:
+    case value:
+        // Code to be executed if key matches the value
+        break;  // Exits the switch block
 
-//         break;
+    default:
+        // Code to be executed if key does not match any cases
+        break;  // Exits the switch block  
+}
 
-//     default:
-
-//         break;    
-// }
-
+// Example 1: Checking grades
 let grade = 'B'
 switch(grade){
 
@@ -16,7 +18,7 @@ switch(grade){
         console.log("Grade is A");
         break;
     case 'B':
-        console.log("Grade is B");
+        console.log("Grade is B");  // Executes this case if grade is 'B'
         break;
     case 'C':
         console.log("Grade is C");
@@ -29,10 +31,11 @@ switch(grade){
         break;
    
     default:
-        console.log("Invalid Grades");
+        console.log("Invalid Grades");   // Executes if grade does not match any case
         break;    
 }
 
+// Example 2: Adjusting salary based on role
 let role = "CEO";
 let salary = 100000;
 switch(grade){
@@ -40,7 +43,7 @@ switch(grade){
     case "employee": 
     case  "hr":
     case "manager":
-        salary += 0.05*salary;
+        salary += 0.05*salary;   // Increase salary by 5% for employee, hr, or manager roles
         break;
     case "CEO":
     case "CIO":
@@ -48,7 +51,7 @@ switch(grade){
         salary += 0.1*salary;
         break;
     default:
-        console.log("Unknown Role");   
+        console.log("Unknown Role");    // Executes if role does not match any case   
 }
 
-console.log(salary);
+console.log(salary);    // Outputs the adjusted salary based on the role
