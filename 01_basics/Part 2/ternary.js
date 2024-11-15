@@ -22,4 +22,3 @@ isUserLoggedIn
     ?console.log("Access Granted")      // If logged in and course is purchased, grant access
     : console.log("Access Denied !! Please Buy The Course")     // If logged in but course not purchased, deny access with message
     : console.log("Access Denied !! Please login");     // If not logged in, deny access and prompt to log in
-    
