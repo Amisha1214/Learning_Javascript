@@ -1,69 +1,48 @@
-// Function declaration
-function add(a, b) {
-    return a + b;
+// Declaration of Array
+
+// Using square bracket
+let numbersArray = [];
+console.log(Array.isArray(numbersArray)); // true
+
+let numberArray = [10, 20, 30, 40, 50];
+console.log(numberArray); // [10, 20, 30, 40, 50]
+
+// Using array constructor
+let fruit = new Array("Apple, Banana, Oranges");
+console.log(fruit); // ["Apple, Banana, Oranges"]
+
+let fruits = new Array(5);
+console.log(fruits.length); // 5
+
+// Using array literal
+let mixedArray = Array('Apples', true, 10, { name: "john" });
+console.log(mixedArray); // ["Apples", true, 10, {name: "john"}]
+
+// Accessing array elements
+let nums = [10, 20, 30, 40];
+console.log(nums[0]); // 10
+console.log(nums[-1]); // undefined
+nums[2] = true;
+console.log(nums); // [10, 20, true, 40]
+console.log(nums.length); // 4
+delete nums[3];
+console.log(nums.length); // 4
+
+// Iteration of array
+
+// Using for loop
+for (let i = 0; i < nums.length; i++) {
+    console.log(`at index ${i} value is ${nums[i]}`);
 }
 
-// Calling the function and storing the result
-let result = add(10, 20);
-console.log(result); // Outputs: 30
-
-// Using an arrow function for the same behavior
-let addArrow = (a, b) => {
-    return a + b;
-};
-
-let resultArrow = addArrow(10, 20);
-console.log(resultArrow); // Outputs: 30
-
-// Arrow function with implicit return
-let addImplicit = (a, b) => a + b;
-let resultImplicit = addImplicit(10, 20);
-console.log(resultImplicit); // Outputs: 30
-
-// Single-parameter arrow function
-let printNum = (a) => console.log(a);
-printNum(10); // Outputs: 10
-
-// Using `arguments` in a regular function
-function addWithArgs() {
-    console.log(arguments);
-}
-addWithArgs(10, 20, 30, 40, 50); // Outputs: [Arguments] { '0': 10, '1': 20, '2': 30, '3': 40, '4': 50 }
-
-// Arrow function cannot use `arguments`
-let addArrowWithArgs = () => {
-    // console.log(arguments); // Error: arguments is not defined
-    console.log("Arrow functions don't have arguments object.");
-};
-addArrowWithArgs();
-
-// Binding of `this`
-const person = {
-    name: 'John',
-    greet: function () {
-        console.log('greet', this)
-        console.log(`Hello, my name is ${this.name}`); // Backticks used here
-    }
-    greetTwo: () => {
-        console.log('greet', this)
-        console.log(`Hello, my name is ${this.name}`); // Backticks used here
-    }
-}
-person.greet(); // Outputs: Hello, my name is John
-person.greetTwo(); // Outputs: Arrow functions don't bind `this`
-
-// use for new keyword
-
-function RegularFunction(name){
-    this.name = name;
-}
-const regularObj = new RegularFunction()
-console.log(regularObj);
-
-const ArrowFunction = (name) => {
-    this.name = name;
+// Using while loop
+let i = 0;
+while (i < nums.length) {
+    console.log(`at index ${i} value is ${nums[i]}`);
+    i++;
 }
 
-const arrowObj = new ArrowFunction('Peter')
-
-console.log(arrowobj);
+// Using for-of loop
+for (let num of nums) {
+    console.log(num); // Logs values: 10, 20, true, undefined
+}
