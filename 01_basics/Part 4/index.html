@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dom Selectors</h1>
+    <p id = "myParagraph">This is paragraph with dummy text</p>
+    <span id="hi">Hello</span>
+    <ul>
+        <li class="ListItem">Item 1</li>
+        <li class="ListItem">Item 2</li>
+        <li class="ListItem">Item 3</li>
+        <li class="ListItem">Item 4</li>
+    </ul>
+    <script src = "index.js"></script>
+
+    <script>
+        //select elements using different Dom
+        //console.log(document.getElementById('myParagraph'))
+        //console.log(document.getElementById('hi'))
+
+        const paragraph = document.getElementById('myParagraph');
+
+        paragraph.addEventListener('click',()=>{
+            paragraph.classList.toggle('highlight')
+        })
+    </script>
+</body>
+</html>
